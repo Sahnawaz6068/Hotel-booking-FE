@@ -6,7 +6,7 @@ const HotelCatlog = ({ hotel }) => {
   const navigate = useNavigate(); 
 
   return (
-    <div
+    <div 
       onClick={() => navigate(`/hotel/${_id}`)} 
       className="bg-white rounded-md shadow-lg overflow-hidden transition transform hover:scale-105 duration-300 w-full max-w-sm sm:max-w-xs md:max-w-sm lg:max-w-md mx-auto cursor-pointer"
     >

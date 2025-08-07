@@ -8,7 +8,7 @@ const HotelPage = () => {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    const fetchHotel = async () => {
+    const fetchHotel = async () => { 
       try {
         const res = await fetch(`http://localhost:3000/api/v1/hotel/${hotelId}`); 
         const data = await res.json();

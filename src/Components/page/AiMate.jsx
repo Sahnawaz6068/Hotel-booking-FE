@@ -12,7 +12,7 @@ const AiMate = () => {
     if (!input.trim()) return;
 
     setLoading(true);
-    setError('');
+    setError(''); 
     setAiResponse('');
 
     try {
