@@ -3,10 +3,13 @@ import React from 'react';
 const About = () => {
   return (
     <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-md">
-      <h1 className="text-3xl font-bold text-center mb-4">About Me</h1>
+      <h1 className="text-2xl font-bold text-center mb-4">About Me: <span className='bg-blue-200 p-2 rounded-2xl'>Sahnawaz Hussain</span></h1>
       
       <p className="text-gray-700 mb-6 leading-relaxed">
-       I love everything about what Happenstance is doing. I don't have many hobbies outside coding. I am not athletic, bad at singing, don't drink, can't dance. Building is the only thing I am good at. At this point, I want to be a part of taking something from 0-1 or 1 -{'>'} 100. I just want to be heads down chasing that goal
+       I love everything about what Happenstance is doing. I don't have many hobbies outside coding.
+        I am not athletic, bad at singing, don't drink, can't dance.
+         <span className='bg-amber-100 p-1 rounded-md'>Building is the only thing I am good at. </span>
+         At this point, I want to be a part of <span className='bg-amber-100'> taking something from 0-1 or 1 -{'>'} 100. </span> I just want to be   <span className='bg-amber-200'>heads down chasing that goal </span>
       </p>
 
       <h2 className="text-xl font-semibold mb-3">Connect With Me</h2>
