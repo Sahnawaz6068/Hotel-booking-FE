@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import HotelCatllog from '../UI/HotelCatlog'; // Make sure the component name 'HotelCatllog' is correct
+import HotelCatllog from '../UI/HotelCatlog'; 
 
 const Hotels = () => {
   const [hotels, setHotels] = useState([]);
@@ -13,9 +13,7 @@ const Hotels = () => {
         }
         const result = await response.json();
         
-        // FIX #1: Check if the data is in result.response or just result
-        // If your API returns { "response": [...] }, use result.response.
-        // If your API returns just [...], use result.
+        
         const data = result.response || result; 
         
         setHotels(data);
@@ -25,16 +23,15 @@ const Hotels = () => {
     };
 
     fetchHotels();
-  }, []); // This empty array means the effect runs only once. Correct!
+  }, []); 
 
   return (
     <div className="min-h-screen bg-[linear-gradient(to_bottom_left,white,#dbeafe,white)] py-10 px-4 w-full overflow-y-auto">
       <h1 className="text-3xl font-bold text-center text-gray-800">Hotel List</h1>
       <div className="mx-14">
-        <div className="flex flex-wrap gap-6 justify-center pt-16">
+        <div className="flex flex-wrap gap-4 justify-center pt-16">
           {hotels.length > 0 ? (
             hotels.map((hotel) => (
-              // FIX #2: Pass the individual 'hotel' object, not the entire 'hotels' array.
               <HotelCatllog key={hotel._id || hotel.id} hotel={hotel} />
             ))
           ) : (

@@ -16,7 +16,7 @@ const Nav = () => {
 
         <div className="flex space-x-6 text-blue-800 font-medium">
           <Link to="/">HOME</Link>
-          <Link to="/">Destinations</Link>
+          <Link to="/ai">Stay-Mate</Link>
           <Link to="/hotels">Hotels</Link>
           <Link to="/about">About us</Link>
         </div>

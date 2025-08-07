@@ -7,6 +7,10 @@ import About from './Components/page/About'
 import Footer from './Components/UI/Footer'
 import Nav from './Components/Nav'
 import Error from './Components/page/Error'
+import HotelPage from './Components/page/HotelPage'
+import SignIn from './Components/page/SignIn'
+import BookRoom from './Components/page/BookRoom'
+import AiMate from './Components/page/AiMate'
 
 function Layout() {
   return (
@@ -31,6 +35,10 @@ function App() {
           <Route path="/" element={<Home />} /> 
           <Route path='hotels' element={<Hotels />} />
           <Route path='about' element={<About />} />
+          <Route path='login' element={<SignIn />} />
+          <Route path='booking' element={<BookRoom/>} />
+          <Route path='/hotel/:hotelId' element={<HotelPage/>}/>
+          <Route path="/ai" element={<AiMate/>} />
         </Route>
         <Route path="*" element={<Error/>}/>
       </Routes>
