@@ -8,17 +8,17 @@ const Hotels = () => {
     const fetchHotels = async () => {
       try {
         const response = await fetch("http://localhost:3000/api/v1/hotel");
-        if (!response.ok) {
+        if (!response.ok) {                                                //response.status or response.json 
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const result = await response.json();
+        const result = await response.json();  
         
         
-        const data = result.response || result; 
+        const data = result.response || result;  // response yaha do hai dono alag hai
         
-        setHotels(data);
+        setHotels(data); //setting hotel 
       } catch (error) {
-        console.error("Error fetching hotel list:", error);
+        console.error(" in  fetching hotel list:", error);
       }
     };
 
@@ -32,7 +32,7 @@ const Hotels = () => {
         <div className="flex flex-wrap gap-4 justify-center pt-16">
           {hotels.length > 0 ? (
             hotels.map((hotel) => (
-              <HotelCatllog key={hotel._id || hotel.id} hotel={hotel} />
+              <HotelCatllog key={hotel._id || hotel.id} hotel={hotel} />           //._id for mongoDB and .id for sql
             ))
           ) : (
             <p className="text-center text-gray-500">Loading hotels...</p>

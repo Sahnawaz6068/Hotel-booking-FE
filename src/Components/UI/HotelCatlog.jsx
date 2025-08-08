@@ -2,12 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const HotelCatlog = ({ hotel }) => {
-  const { hotelName, city, price, imageUrl, description,_id } = hotel;
+  const { hotelName, city, price, imageUrl, description,_id } = hotel; 
   const navigate = useNavigate(); 
 
   return (
     <div 
-      onClick={() => navigate(`/hotel/${_id}`)} 
+      onClick={() => navigate(`/hotel/${_id}`)}  //check on the app.jsx this route
       className="bg-white rounded-md shadow-lg overflow-hidden transition transform hover:scale-105 duration-300 w-full max-w-sm sm:max-w-xs md:max-w-sm lg:max-w-md mx-auto cursor-pointer"
     >
       <img

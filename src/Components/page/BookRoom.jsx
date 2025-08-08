@@ -10,16 +10,17 @@ const BookRoom = () => {
     if (!token) {
       navigate('/login');
     }
-  }, [navigate]);
+  }, [navigate]); //d
 
   const [formData, setFormData] = useState({
-    hotel: '6893806f4174acdf95c3ef45',
+    hotel: '6893806f4174acdf95c3ef45',  // param se la sakte hai per ye page khud param id contain karna chahiye ?
     checkInDate: '',
     checkOutDate: '',
     numberOfGuests: 1,
     room: ''
   });
 
+  //use ref?
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
